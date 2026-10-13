@@ -1,6 +1,4 @@
 
-const arr = [1, 2, 3, 4, 1, 0, 2, 2];
-
 const divide = (arr, n) => {
     let result = [];
     let chunk = [];
@@ -24,5 +22,15 @@ const divide = (arr, n) => {
     return result;
 };
 
-console.log(divide(arr, 5));
+// Take input from the user
+const arr = prompt("Enter array elements separated by commas")
+    .split(",")
+    .map(Number);
+
+const n = Number(prompt("Enter maximum sum"));
+
+// Display the result using alert
+alert(JSON.stringify(divide(arr, n)));
+
+
 
